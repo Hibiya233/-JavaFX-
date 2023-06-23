@@ -1,0 +1,24 @@
+#myButton {
+    -fx-background-color: purple;
+    -fx-border-color: transparent;
+    -fx-text-fill: #eaa1ea;
+    -fx-font-size: 16px;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: bold;
+    -fx-z-index: 1;
+    -fx-overflow: hidden;
+    -fx-position: relative;
+    -fx-border-radius: 12px;
+}
+
+#myButton:hover {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+
+#myButton:pressed {
+    -fx-background-color: red;
+    -fx-text-fill: yellow;
+}

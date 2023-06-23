@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: #feffec;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkingmanagesystem.parkingmanagesystem.controller.loginController">
+   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Image url="@../img/icon.png" />
+   </ImageView>
+   <Button fx:id="loginButton" layoutX="560.0" layoutY="348.0" mnemonicParsing="false" onMouseEntered="#loginButton_MouseEntered" onMouseExited="#loginButton_MouseExited" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #FE894B; -fx-font-size: 16; -fx-font-weight: bold;" text="&lt;&lt;&lt;" textFill="#9d6429" AnchorPane.bottomAnchor="101.60000000000002" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="348.0">
+      <effect>
+         <DropShadow height="13.16" offsetY="3.0" radius="6.04" width="13.0">
+            <color>
+               <Color red="0.5400000214576721" green="0.5400000214576721" blue="0.5400000214576721" opacity="0.5" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <Rectangle fx:id="leftBackground" arcHeight="25.0" arcWidth="25.0" fill="#303136" height="480.0" layoutX="-30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="396.0" />
+   <Rectangle id="upStripes" fx:id="upStripes" arcHeight="15.0" arcWidth="15.0" fill="#4c4e56" height="56.0" layoutX="-29.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="411.0">
+      <effect>
+         <DropShadow height="23.39" offsetY="5.0" radius="5.3475" width="0.0">
+            <color>
+               <Color opacity="0.13513514399528503" />
+            </color>
+         </DropShadow>
+      </effect>
+   </Rectangle>
+   <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#4c4e56" height="56.0" layoutX="-30.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="411.0" />
+   <ImageView fx:id="logo" fitHeight="185.0" fitWidth="184.0" layoutX="95.0" layoutY="149.0" onMouseEntered="#logo_MouseEntered" onMouseExited="#logo_MouseExited" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../img/logo.png" />
+      <effect>
+         <Bloom threshold="0.73" />
+      </effect>
+   </ImageView>
+   <Label fx:id="title" layoutX="39.0" layoutY="43.0" prefHeight="38.0" prefWidth="296.0" text="司舆·停车场收费管理系统" textAlignment="CENTER" textFill="#fff79b">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+   <Label fx:id="dengluzhanghao" layoutX="534.0" layoutY="125.0" text="登录账号" textFill="#4c4e56">
+      <font>
+         <Font size="36.0" />
+      </font>
+      <effect>
+         <DropShadow height="9.93" offsetY="2.0" radius="1.9825" width="0.0">
+            <color>
+               <Color opacity="0.3623310923576355" />
+            </color>
+         </DropShadow>
+      </effect>
+   </Label>
+   <HBox layoutX="747.0" layoutY="3.0" prefHeight="30.0" prefWidth="50.0">
+      <Button fx:id="minWindowButton" mnemonicParsing="false" onMouseEntered="#minWindowButton_MouseEntered" onMouseExited="#minWindowButton_MouseExited" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="-" />
+      <Button fx:id="closeWindowButton" mnemonicParsing="false" onMouseEntered="#closeWindowButton_MouseEntered" onMouseExited="#closeWindowButton_MouseExited" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="X" />
+   </HBox>
+   <HBox fx:id="usernameBox" layoutX="506.0" layoutY="220.0" onMouseExited="#usernameBox_MouseExited" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: d9dcd0;" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="506.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="220.0">
+      <effect>
+         <DropShadow height="14.25" offsetY="5.0" radius="6.3125" width="13.0">
+            <color>
+               <Color red="0.550000011920929" green="0.550000011920929" blue="0.550000011920929" opacity="0.5" />
+            </color>
+         </DropShadow>
+      </effect>
+      <SVGPath content="M7 14C4.23858 14 2 16.2386 2 19V22C2 22.5523 2.44772 23 3 23H21C21.5523 23 22 22.5523 22 22V19C22 16.2386 19.7614 14 17 14H7Z&#10;&#10;M12 1C8.96243 1 6.5 3.46243 6.5 6.5C6.5 9.53757 8.96243 12 12 12C15.0376 12 17.5 9.53757 17.5 6.5C17.5 3.46243 15.0376 1 12 1Z&#10;" fill="#a3a59c" scaleX="0.8" scaleY="0.8">
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </SVGPath>
+      <TextField fx:id="username" onMouseEntered="#username_MouseEntered" onMouseExited="#username_MouseExited" prefHeight="40.0" prefWidth="183.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font name="YouYuan" size="12.0" />
+         </font>
+      </TextField>
+   </HBox>
+   <HBox fx:id="passwordBox" layoutX="506.0" layoutY="284.0" onMouseExited="#passwordBox_MouseExited" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: d9dcd0;">
+      <effect>
+         <DropShadow height="14.25" offsetY="5.0" radius="6.3125" width="13.0">
+            <color>
+               <Color red="0.550000011920929" green="0.550000011920929" blue="0.550000011920929" opacity="0.5" />
+            </color>
+         </DropShadow>
+      </effect>
+      <SVGPath content="M39,18H35V13A11,11,0,0,0,24,2H22A11,11,0,0,0,11,13v5H7a2,2,0,0,0-2,2V44a2,2,0,0,0,2,2H39a2,2,0,0,0,2-2V20A2,2,0,0,0,39,18ZM15,13a7,7,0,0,1,7-7h2a7,7,0,0,1,7,7v5H15ZM14,35a3,3,0,1,1,3-3A2.9,2.9,0,0,1,14,35Zm9,0a3,3,0,1,1,3-3A2.9,2.9,0,0,1,23,35Zm9,0a3,3,0,1,1,3-3A2.9,2.9,0,0,1,32,35Z&#10;" fill="#a3a59c" scaleX="0.45" scaleY="0.45" style="-fx-translate-x: 0; -fx-translate-y: 2;">
+         <HBox.margin>
+            <Insets left="4.0" top="-4.0" />
+         </HBox.margin>
+      </SVGPath>
+      <PasswordField fx:id="password" onMouseEntered="#password_MouseEntered" onMouseExited="#password_MouseExited" prefHeight="40.0" prefWidth="183.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font name="YouYuan" size="12.0" />
+         </font>
+      </PasswordField>
+   </HBox>
+</AnchorPane>

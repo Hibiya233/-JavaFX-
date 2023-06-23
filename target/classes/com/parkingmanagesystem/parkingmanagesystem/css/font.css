@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "fangyuan";
+    src: url("AlimamaFangYuanTiVF-Thin.ttf");
+}
+
+.font {
+    -fx-font-family: "fangyuan";
+}

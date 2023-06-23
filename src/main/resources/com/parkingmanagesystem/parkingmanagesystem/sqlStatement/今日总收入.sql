@@ -1,0 +1,1 @@
+SELECT SUM(`费用`) AS `今日总收入` FROM `缴费单` WHERE `出库时间` LIKE CONCAT(CURDATE(),' %');
